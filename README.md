@@ -1,77 +1,42 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+## Laravel Ads
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+![ezgif com-gif-maker](https://github.com/davide-bibbo93/dojo-laravel-ads/blob/master/ezgif-6-d05067f1cf0a.gif)
 
-## About Laravel
+Alla prima visita viene visualizzata la finestra modale, alla seconda visita su quella pagina la modale non si apre.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Descrizione Progetto
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+In questo esercizio post corso creeremo un sistema per visualizzare una pubblicità in una finestra modale solo alla prima visita sulla pagina desiderata.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Per poter affrontare questo esercizio sarà necessario saper utilizzare:
+Laravel,
+Js,
+Vue, 
+Axios,
+Scss
 
-## Learning Laravel
+## Milestone 1
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Per prima cosa dovrai creare un nuovo progetto Laravel e aggiungere due rotte.
+Il layout, sarà identico, ma servirà poi per testare due diversi modi per conservare l'informazione che ti permetterà di capire se l'utente ha già visitato la pagina.
+Preparare la finestra modale in Vue affinché si visualizzi solo se una data condizione si verifica, in questa prima fase questa condizione sarà fissata manualmente.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Milestone 2
 
-## Laravel Sponsors
+Nella seconda rotta gestirai l'informazione di visita effettuata con i cookies.
+**In questo caso studia la documentazione dei cookies** 
+[https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Una volta salvati i cookies **dovrai recuperare questa informazione** per gestire la visualizzazione della modale preparata in Vue.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+## Milestone 3
 
-## Contributing
+Nella prima rotta gestirai l'informazione di visita effettuata con le **sessions**.
+**Studia la documentazione sul sito di Laravel** 
+[https://laravel.com/docs/7.x/session](https://laravel.com/docs/7.x/session)
+Come configurazione base Laravel conserva le sessioni nei file in `storage/framework/sessions`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Una volta salvata la sessione **dovrai recuperare questa informazione** per gestire la visualizzazione della modale preparata in Vue.
 
 ## License
 

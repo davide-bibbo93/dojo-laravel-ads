@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PageController@home')->name('cookies');
+Route::get('sessions', 'PageController@sessions')->name('sessions');
